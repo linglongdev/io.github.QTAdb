@@ -1,0 +1,49 @@
+From d211cd4048d925ced257484ee23f57231c0603ee Mon Sep 17 00:00:00 2001
+From: wjyrich <1071633242@qq.com>
+Date: Thu, 15 Aug 2024 12:26:51 +0800
+Subject: [PATCH] install
+
+---
+ QTAdb.desktop | 11 +++++++++++
+ QTAdb.pro     |  8 ++++++++
+ 2 files changed, 19 insertions(+)
+ create mode 100644 QTAdb.desktop
+
+diff --git a/QTAdb.desktop b/QTAdb.desktop
+new file mode 100644
+index 0000000..d92f395
+--- /dev/null
++++ b/QTAdb.desktop
+@@ -0,0 +1,11 @@
++[Desktop Entry]
++Categories=Accessibility;Qt;Utility;
++Exec=QTAdb
++Name=QTAdb
++Name[zh_CN]=QTAdb
++Icon=Places-folder-icon
++StartupNotify=false
++Terminal=false
++Type=Application
++GenericName=QTAdb
++Version=1.0
+\ No newline at end of file
+diff --git a/QTAdb.pro b/QTAdb.pro
+index 4f5f671..df1722c 100644
+--- a/QTAdb.pro
++++ b/QTAdb.pro
+@@ -49,3 +49,11 @@ DISTFILES += \
+ 
+ RESOURCES += \
+     resources.qrc
++
++target.path = $$PREFIX/bin
++desktop.files = QTAdb.desktop
++desktop.path = $$PREFIX/share/applications/
++icons.path = $$PREFIX/share/icons
++icons.files = Icons/Places-folder-icon.png
++
++INSTALLS += target desktop icons
+\ No newline at end of file
+-- 
+2.43.4
+
